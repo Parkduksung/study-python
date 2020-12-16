@@ -62,16 +62,45 @@ for i in array1 :
     print(i)
 
 
-list_a = [0,1,2,3,4,5,6,7]
 
-list_a.extend(list_a)
-print(list_a)
-list_a.append(10)
-print(list_a)
-list_a.insert(3,0)
-print(list_a)
-list_a.remove(3)
-print(list_a)
-list_a.pop(3)
-print(list_a)
-list_a.clear()
+#4-1장 문제
+
+numbers = [273,103,5,32,65,9,72,800,90]
+
+for num in numbers :
+    if num >=100 :
+        print(num)
+
+
+for num in numbers :
+    if num %2 == 0 :
+        print("0" , num)
+    else:
+        print("1" , num)
+
+
+# 요거 좀 다양하게 나올수도. 형변환은 중요함.
+print(len(numbers))
+for num in numbers :
+    print("num : ", len(str(num)))
+
+
+list_of_list = [
+    [1, 2, 3],
+    [4, 5, 6, 7],
+    [8, 9],
+]
+
+for x in list_of_list : 
+    for y in x :
+        print(y)
+
+
+numbers = [1,2,3,4,5,6,7,8,9]
+output = [[], [], []]
+
+for num in numbers :
+    output[num%3-1].append(num)
+
+print(output)
+
