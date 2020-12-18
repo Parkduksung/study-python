@@ -167,4 +167,9 @@ char = {
 
 
 for key in char :
-    print(char[key])
+    if type(key) is str :
+        for i in len(key) :
+            print(key, char[key][i])
+    elif type(key) is list :
+        for i in len(key) :
+            print()
