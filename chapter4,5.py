@@ -151,12 +151,21 @@ for key in pets:
     print(key["name"],key["age"])
 
 
-#3번 모르겠음 다시푸셈.
+#3번 모르겠음 다시푸셈. 풀긴했는데 나오는 키 순서가 좀 다른디..
 numbers = [1,2,6,8,4,3,2,1,9,5,4,9,7,2,1,3,5,4,8,9,7,2,3]
+counter ={}
 
+for x in numbers :
+    sum = 0
+    for y in numbers :
+        if x == y :
+            sum +=1 
+    counter[str(x)] = sum
+
+print(counter)
 
 char = {
-    "name" : "kasa",
+    "name" : "kisa",
     "level" : 12,
     "items" : {
         "sword" : "fire sword",
@@ -167,9 +176,24 @@ char = {
 
 
 for key in char :
-    if type(key) is str :
-        for i in len(key) :
-            print(key, char[key][i])
-    elif type(key) is list :
-        for i in len(key) :
-            print()
+    if type(char[key]) is dict :
+        for x in char[key] :
+            print(x, ":" , char[key][x])
+    elif type(char[key]) is list :
+        for x in char[key] :
+            print(x, ":" , x)
+
+    else :
+        print(key, ":", char[key])
+
+        
+
+key_list = ["name" , "hp" , "mp", "level" ]
+value_list = ["gisa", 200, 30, 5]
+t = {}
+
+if len(key_list) == len(value_list) :
+    for i in range(0, len(key_list)) : 
+        t[key_list[i]] = value_list[i]
+
+print(t)
