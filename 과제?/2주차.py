@@ -3,8 +3,7 @@
 array = [1,5,2,6,3,7,4]
 commands = [[2,5,3], [4,4,1], [1,7,3]]
 
-
-
+#풀긴했는데 더 줄여볼수 있음 lambda 쓰면.
 def solution(array, commands):
     answer = []
     for num in commands:
@@ -12,3 +11,21 @@ def solution(array, commands):
     return answer
 
 print(solution(array,commands))
+
+
+#두 정수 사이의 합
+def solution(a, b):
+    return sum([i for i in range(min(a,b),max(a,b)+1,1)])
+
+# 축약해봄.
+# def solution1(a, b):
+#     return sum(range(min(a,b),max(a,b)+1))
+
+a = 3
+b = 5
+
+#만약 min , max 못쓰면 3항연산자 써서 하면됨.
+max = a >= b and a or b
+print(max)
+
+
