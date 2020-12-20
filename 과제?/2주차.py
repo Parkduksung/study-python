@@ -24,21 +24,21 @@ def solution(a, b):
 #만약 min , max 못쓰면 3항연산자 써서 하면됨.
 # max = a >= b and a or b 등.
 
-s = "oo"
-
-result = s.lower().count("p")==s.lower().count("y")==0 and True or s.lower().count("p")==s.lower().count("y")
-
-print(result)
 
 #문자열 내 p와 y의 개수
 def solution(s):
-    answer = True
-    
-    # [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
-    print('Hello Python')
+    return s.lower().count("p")==s.lower().count("y")==0 and True or s.lower().count("p")==s.lower().count("y")
 
-    return True
+# 근데 사실상 0 일때의 예외 처리 생각해서 3항 연산자 넣어봤는데 
+# 처음 생각했던 s.lower().count("p")==s.lower().count("y") 이것만 해도 될듯.
+# 왜냐면 둘다 0개면 저 식이 성립해서 true 뱉어내니.. 
+# def solution(s):
+#     return s.lower().count("p")==s.lower().count("y")
 
+s = "Zbcdefg"
 
+print(sorted(s))
 
-
+#문자열 내림차순으로 배치하기.
+def solution(s):
+    return ''.join(list(reversed(sorted(s))))
