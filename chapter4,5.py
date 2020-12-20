@@ -174,19 +174,19 @@ char = {
     "skill" : ["t", "k", "o"]
 }
 
-
+# int, str 구분하려고 한건데 else 로 하나로 묶어도 될듯...
 for key in char :
     if type(char[key]) is dict :
         for x in char[key] :
             print(x, ":" , char[key][x])
     elif type(char[key]) is list :
         for x in char[key] :
-            print(x, ":" , x)
-
+            print(key, ":" , x)
+    elif type(char[key]) is str :
+        print(key, ":", char[key])
     else :
         print(key, ":", char[key])
-
-        
+    
 
 key_list = ["name" , "hp" , "mp", "level" ]
 value_list = ["gisa", 200, 30, 5]
@@ -197,3 +197,40 @@ if len(key_list) == len(value_list) :
         t[key_list[i]] = value_list[i]
 
 print(t)
+
+limit = 10000
+i=1
+
+sum_value = 0
+
+while sum_value < limit :
+    sum_value += i
+    i+=1
+
+print("{} {} {}".format(i-1,limit,sum_value))
+
+
+max_value = 0
+a = 0
+b = 0
+
+for i in range(1,100) :
+    j = 100 - i
+    if max_value < i*j :
+        max_value = i*j
+        a = i
+        b = j
+
+print("{} {} {}".format(a,b,max_value))
+
+
+
+print("{:b}".format(6))
+print(int("110",2))
+
+output = ["{:b}".format(i).count('0') == 1 for i in range(1,101)]
+
+output = [i for i in range(1,101)
+    if "{:b}".format(i).count('0') == 1]
+
+print(output)
