@@ -46,13 +46,11 @@ def solution(s):
 #sorted 내부 보니까 파라메터로 bool 형식의 reverse 가 있네.
 # 좀더 줄여보면 ''.join(sorted(s, reverse=True)) 이런식으로 가능. 가독성에서는 좋지만 하는건 똑같음.
 
-s = "a234"
-print(len(s) in [4,6] and s.isdigit())
+
 #문자열 다루기 기본.
 def solution(s):
-    return len(s) in (4,6) and s.isdigit()
-
-
+    return (len(s) == 4 or len(s) == 6) and s.isdigit()
 
 #여기서 한번더 줄여보면 4,6 이니까 이걸 그냥 리스트에 담아 놓고 in 으로 안에 있는지 확인해볼수 있는듯.
 #len(s) in [4,6] and s.isdigit()
+
