@@ -1,3 +1,5 @@
+#7-1 은 from import as 만 알면 검색해서 사용하면 됨.
+#그리고 나머지는 7-3의 패키지 만드는것만 실제로 적용하자. (나만의 함수들도 만들어서 쓸수 있음.)
 
 import math
 
@@ -28,7 +30,7 @@ print(os.name)
 
 import urllib as request
 
-
+#html 소스 읽어오는구만..
 target = request.urlopen("https://naver.com") 
 output = target.read()
 
