@@ -112,3 +112,4 @@ class Child(Parent):
 child = Child()
 child.test()
 print(child.value)
+
