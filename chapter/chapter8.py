@@ -27,7 +27,9 @@ for student in students :
         average.array([student[i] for i in student if type(student[i]) == int]).mean()
     )
 
+#여기서 __init__ 은 한개밖에 안됨.
 class Student :
+
     def __init__(self,name,korean,math,english,science) :
         self.name = name
         self.korean = korean
@@ -57,3 +59,56 @@ for student in student1 :
     #     sum([i for i in student if type(i) == int]),
     #     average.array([i for i in student if type(i) == int]).mean()
     # )
+
+
+
+
+    #8-2
+    
+    #인스턴스가 어떤 클래스로 만들어졌는지 확인가능 파이썬은.
+
+
+class Student2 :
+    def __init__(self) :
+        pass
+
+student2 = Student2()
+print(isinstance(student2,Student2))
+
+print(isinstance(student1[0],Student))
+
+# 단순한 인스턴스 확인
+
+print(type(student2)==Student2())
+
+
+# 만약에 클래스의 변수가 접근한정자가 private 으로 하고 싶으면 앞에다 __ 두개만 넣으면 된다.
+
+# getter-setter 
+# private 한 radius 를 간접적으로 접근.
+# 여기서 안전하게 사용하려면 먼가 setter 할때의 value 에 대한 조건문을 걸고 그 조건문에 해당되지 않으면 raise 해서 오류 발생시키면된다.
+
+
+def get_radius(self):
+    return self.__radius
+def set_radius(self, value):
+    self.__radius = value
+
+
+#상속
+
+class Parent:
+    def __init__(self):
+        self.value = "테스트"
+        print("__init__ 호출")
+    def test(self):
+        print("test()")
+
+class Child(Parent):
+    def __init__(self):
+        Parent.__init__(self)
+        print("Child init")
+
+child = Child()
+child.test()
+print(child.value)
