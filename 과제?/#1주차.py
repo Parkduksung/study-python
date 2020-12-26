@@ -6,23 +6,48 @@ class CalType(Enum):
     Mul = 3
     Div = 4
 
+def operatorCal(kind , a, b) :
+    if kind == CalType.Plus :
+        plus(a,b)
+    elif kind == CalType.Min:
+        min(a,b)
+    elif kind == CalType.Mul:
+        mul(a,b)
+    elif kind == CalType.Div:
+        div(a,b)
+
+def plus(*values) :
+    sum = 0
+    for value in values :
+        sum += value
+    return printResult(sum)
+
+def min(*values) :
+    sum = 0
+    for value in values :
+        if values[0] == value :
+            sum += value
+        else :
+            sum -= value
+    return printResult(sum)
+
+def mul(*values) :
+    sum = 1
+    for value in values :
+        sum *= value
+    return printResult(sum)
+
+def div(*values) :
+    sum = 0
+    for value in values :
+        if values[0] == value :
+            sum += value
+        else :
+            sum /= value
+    return printResult(sum)
+
+
 def printResult(result) :
     print("결과 {}".format(result))
 
-plus_lambda = lambda x, y : x+y
-min_lambda = lambda x, y : x-y
-mul_lambda = lambda x, y : x*y
-div_lambda = lambda x, y : x/y
-
-def operatorCal(kind , a, b) :
-    if kind == CalType.Plus :
-        printResult(plus_lambda(a,b))
-    elif kind == CalType.Min:
-        printResult(min_lambda(a,b))
-    elif kind == CalType.Mul:
-        printResult(mul_lambda(a,b))
-    elif kind == CalType.Div:
-        printResult(div_lambda(a,b))
-
 operatorCal(CalType.Min,1,2)
-
