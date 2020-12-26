@@ -54,33 +54,3 @@ def solution(s):
 #여기서 한번더 줄여보면 4,6 이니까 이걸 그냥 리스트에 담아 놓고 in 으로 안에 있는지 확인해볼수 있는듯.
 #len(s) in [4,6] and s.isdigit()
 
-
-#가운데 글자 가져오기.
-def solution(s):
-    result = ""
-    if(len(s)%2 == 0) :
-        result = s[int(len(s)/2)-1 : int(len(s)/2)+1]
-    else:
-        result = s[int(len(s)/2)]
-    return result
-
-#풀긴 했는데 안이쁨.. 좀 더 축약이 가능해보임..
-#줄여봄.
-# return s[int(len(s)/2)-1 : int(len(s)/2)+1] if len(s)%2 == 0 else s[int(len(s)/2)]
-
-#문자열 내 마음대로 정렬하기.
-
-
-t = ["sun", "bed", "car"]
-
-
-dic = {i:i[1] for i in t}
-
-print(type(dic))
-
-import operator
-
-s = sorted(dic.items(), key=operator.itemgetter(1))
-
-print([i[0] for i in s]) 
-    
