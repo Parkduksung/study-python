@@ -54,3 +54,17 @@ def solution(s):
 #여기서 한번더 줄여보면 4,6 이니까 이걸 그냥 리스트에 담아 놓고 in 으로 안에 있는지 확인해볼수 있는듯.
 #len(s) in [4,6] and s.isdigit()
 
+
+s = "abcde"
+
+s1 = "qwer"
+
+print(len(s1)/2 , s1[2-1:2+1])
+print(len(s)/2 , s[2])
+
+if len(s)%2 == 0 : print(s[len(s)/2-1:len(s)/2+1])
+elif len(s)%2 ==1 :  print(s[len(s)/2])
+#가운데 글자 가져오기.
+def solution(s):
+    answer = ''
+    return answer
