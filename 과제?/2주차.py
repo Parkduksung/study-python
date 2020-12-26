@@ -64,3 +64,17 @@ def solution(strings, n):
 #가운데 글자 가져오기
 def solution(s):
     return s[int(len(s)/2)-1 : int(len(s)/2)+1] if len(s)%2 == 0 else s[int(len(s)/2)]
+
+
+#두 개 뽑아서 더하기.
+
+number = [5,0,2,7]
+
+t = []
+for i in range(len(number)) :
+    for j in range(len(number)) :
+        if i!=j :
+            t.append(number[i]+number[j])
+
+
+print(sorted(list(set(t))))
