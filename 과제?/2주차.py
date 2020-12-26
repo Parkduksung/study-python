@@ -77,13 +77,14 @@ def solution(numbers):
     return sorted(list(set(answer)))
 
 
-str = ""
 
-
-for i in range(10) :
-    if i%2==0 :
-        str +="수"
-    else:
-        str +="박"
-
-print(str)
+#수박수박수박~
+#너무 쉽게 품..
+def solution(n):
+    answer = ''
+    for i in range(n) :
+        if i%2==0 :
+            answer +="수"
+        else:
+            answer +="박"
+    return answer
