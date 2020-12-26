@@ -68,13 +68,22 @@ def solution(s):
 
 #두 개 뽑아서 더하기.
 
-number = [5,0,2,7]
+def solution(numbers):
+    answer = []
+    for i in range(len(numbers)) :
+        for j in range(len(numbers)) :
+            if i!=j :
+                answer.append(numbers[i]+numbers[j])
+    return sorted(list(set(answer)))
 
-t = []
-for i in range(len(number)) :
-    for j in range(len(number)) :
-        if i!=j :
-            t.append(number[i]+number[j])
+
+str = ""
 
 
-print(sorted(list(set(t))))
+for i in range(10) :
+    if i%2==0 :
+        str +="수"
+    else:
+        str +="박"
+
+print(str)
