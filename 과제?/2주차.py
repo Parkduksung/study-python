@@ -55,16 +55,32 @@ def solution(s):
 #len(s) in [4,6] and s.isdigit()
 
 
-s = "abcde"
-
-s1 = "qwer"
-
-print(len(s1)/2 , s1[2-1:2+1])
-print(len(s)/2 , s[2])
-
-if len(s)%2 == 0 : print(s[len(s)/2-1:len(s)/2+1])
-elif len(s)%2 ==1 :  print(s[len(s)/2])
 #가운데 글자 가져오기.
 def solution(s):
-    answer = ''
-    return answer
+    result = ""
+    if(len(s)%2 == 0) :
+        result = s[int(len(s)/2)-1 : int(len(s)/2)+1]
+    else:
+        result = s[int(len(s)/2)]
+    return result
+
+#풀긴 했는데 안이쁨.. 좀 더 축약이 가능해보임..
+#줄여봄.
+# return s[int(len(s)/2)-1 : int(len(s)/2)+1] if len(s)%2 == 0 else s[int(len(s)/2)]
+
+#문자열 내 마음대로 정렬하기.
+
+
+t = ["sun", "bed", "car"]
+
+
+dic = {i:i[1] for i in t}
+
+print(type(dic))
+
+import operator
+
+s = sorted(dic.items(), key=operator.itemgetter(1))
+
+print([i[0] for i in s]) 
+    
