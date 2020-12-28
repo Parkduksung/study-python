@@ -89,39 +89,4 @@ def solution(n):
             answer +="박"
     return answer
 
-
-#문자열을 정수로 바꾸기.. 이건 하.. 진짜 쓸모없는 문제..
-def solution(s):
-    return int(s)
-
-
-#약수의 합
-def solution(n):
-    answer = 0
-    for i in range(1,n+1) :
-        if n%i ==0 :
-            answer += i
-    return answer
-
-#자연수 뒤집어 배열로 만들기.
-
-def solution(n):
-    return list(reversed([int(i) for i in str(n)]))
-
-#::-1 로도 할수있음..
-
-arr = [1,1,3,3,0,1,1] 
-
-
-answer = []
-answer.append(arr[0])
-for i in range(len(arr)-1) :
-    if arr[i] == arr[i+1] :
-        continue
-    else:
-        answer.append(arr[i+1])
-
-
-print(answer)
-        
-            
+    
