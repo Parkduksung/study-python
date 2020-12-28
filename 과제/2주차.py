@@ -115,4 +115,6 @@ def solution(arr):
             answer.append(arr[i+1])
     return answer
 
-
+#자연수 뒤집어 배열로 만들기.
+def solution(n):
+    return list(reversed([int(i) for i in str(n)]))
