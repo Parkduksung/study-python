@@ -115,3 +115,4 @@ def solution(arr):
             answer.append(arr[i+1])
     return answer
 
+
