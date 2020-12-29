@@ -92,7 +92,8 @@ def solution(n):
 
 #3진법 뒤집기
 def solution(n):
-    return sum(int(3**(len(reverse3Notation(n))-1-i)) * reverse3Notation(n)[i] for i in range(len(reverse3Notation(n))))
+    return sum(
+        int(3**(len(reverse3Notation(n))-1-i)) * reverse3Notation(n)[i] for i in range(len(reverse3Notation(n))))
 
 def reverse3Notation(n) : 
     a = []
@@ -126,3 +127,9 @@ def solution(n):
         if n%i ==0 :
             answer += i
     return answer
+
+#문자열 정수로 바꾸기
+def solution(s):
+    answer = int(s)
+    return answer
+
