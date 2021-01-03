@@ -133,3 +133,18 @@ def solution(s):
     answer = int(s)
     return answer
 
+# #나누어 떨어지는 숫자 배열
+# def solution(arr, divisor):
+#     i for i in arr :
+#      if arr%divisor == 0 
+#     return answer
+
+a = [5, 9, 7, 10]
+
+div = 5
+
+c = [i for i in a if i%div == 0]
+
+
+
+print(c)
