@@ -134,17 +134,11 @@ def solution(s):
     return answer
 
 # #나누어 떨어지는 숫자 배열
-# def solution(arr, divisor):
-#     i for i in arr :
-#      if arr%divisor == 0 
-#     return answer
-
-a = [5, 9, 7, 10]
-
-div = 5
-
-c = [i for i in a if i%div == 0]
+def solution(arr, divisor):
+    answer = [i for i in arr if i%divisor == 0]
+    return sorted(answer) if len(answer)!=0 else [-1]
 
 
-
-print(c)
+#짝수와 홀수
+def solution(num):
+    return "Even" if num%2==0 else "Odd"
