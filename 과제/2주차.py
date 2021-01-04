@@ -142,3 +142,20 @@ def solution(arr, divisor):
 #짝수와 홀수
 def solution(num):
     return "Even" if num%2==0 else "Odd"
+
+#행렬의 덧셈
+
+arr1 = [[1], [2]]
+arr2 = [[3], [4]]
+
+print(len(arr1))
+print(len(arr1[0]))
+
+result = [[]]
+
+for i in range(len(arr1[0])) :
+    for j in range(len(arr1)) :
+        result[j][i] = arr1[j][i] + arr2[j][i]
+    
+
+print(result)
