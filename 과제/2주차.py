@@ -154,14 +154,24 @@ def solution(seoul):
 # => "김서방은 {}에 있다".format(seoul.index("Kim"))
 
 #행렬의 덧셈
-result = [[]]
-a = [[1,2],[2,3]]
-b = [[1,2],[2,3]]
-for i in range(0,len(a)) :
-    if i!=0 :
-        result.extend([[]])
-    for j in range(0,len(a[0])) :
-        result[i].append(a[i][j] + b[i][j])
+def solution(arr1, arr2):
+    result = [[]]
+    for i in range(0,len(arr1)) :
+        if i!=0 :
+            result.extend([[]])
+        for j in range(0,len(arr1[0])) :
+            result[i].append(arr1[i][j] + arr2[i][j])
+    return result
 
-print(result)
+#너무 어렵게 푼거같은데.. for i,j 이런식으로 해서 zip 이용해서도 풀어보아야 할 문제.
 
+#핸드폰 번호 가리기
+
+a = "01033334444"
+
+t =  a[-4:]
+
+k = ''.join(["*" for i in range(0,len(a)-4)])+a[-4:]
+print(k)
+
+print(len(a)==len(k))
