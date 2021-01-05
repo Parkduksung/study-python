@@ -147,6 +147,21 @@ def solution(num):
 def solution(x, n):
     return [x*i for i in range(1,n+1)]
 
-k = ["kim","ki"]
+#서울에서 김서방 찾기
+def solution(seoul):
+    return "김서방은 "+ str(seoul.index("Kim"))+"에 있다"
+#format 으로 하는것도 생각
+# => "김서방은 {}에 있다".format(seoul.index("Kim"))
 
-print(k.index("kim"))
+#행렬의 덧셈
+result = [[]]
+a = [[1,2],[2,3]]
+b = [[1,2],[2,3]]
+for i in range(0,len(a)) :
+    if i!=0 :
+        result.extend([[]])
+    for j in range(0,len(a[0])) :
+        result[i].append(a[i][j] + b[i][j])
+
+print(result)
+
