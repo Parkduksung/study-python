@@ -143,19 +143,10 @@ def solution(arr, divisor):
 def solution(num):
     return "Even" if num%2==0 else "Odd"
 
-#행렬의 덧셈
+#x만큼 간격이 있는 n개의 숫자
+def solution(x, n):
+    return [x*i for i in range(1,n+1)]
 
-arr1 = [[1], [2]]
-arr2 = [[3], [4]]
+k = ["kim","ki"]
 
-print(len(arr1))
-print(len(arr1[0]))
-
-result = [[]]
-
-for i in range(len(arr1[0])) :
-    for j in range(len(arr1)) :
-        result[j][i] = arr1[j][i] + arr2[j][i]
-    
-
-print(result)
+print(k.index("kim"))
