@@ -182,3 +182,9 @@ def solution(a, b):
 #자릿수 더하기
 def solution(n):
     return sum([int(i) for i in str(n)])
+
+#정수 제곱근 판별
+import math 
+def solution(n):
+    return (int(math.sqrt(n))+1)**2 if math.sqrt(n) == int(math.sqrt(n)) else -1
+
