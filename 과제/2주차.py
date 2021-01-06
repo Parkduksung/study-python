@@ -166,12 +166,15 @@ def solution(arr1, arr2):
 #너무 어렵게 푼거같은데.. for i,j 이런식으로 해서 zip 이용해서도 풀어보아야 할 문제.
 
 #핸드폰 번호 가리기
+def solution(phone_number):
+    return ''.join(["*" for i in range(0,len(phone_number)-4)])+phone_number[-4:]
 
-a = "01033334444"
+#생각해보니 "*" * len(phone_number)-4 해도 되네.
 
-t =  a[-4:]
 
-k = ''.join(["*" for i in range(0,len(a)-4)])+a[-4:]
-print(k)
-
-print(len(a)==len(k))
+#2016년
+import datetime 
+def solution(a, b):
+    
+    day_list = ["MON","TUE","WED","THU","FRI","SAT","SUN"]
+    return day_list[datetime.date(2016,a,b).weekday()]
