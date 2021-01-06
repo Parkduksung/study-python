@@ -193,9 +193,22 @@ def solution(arr):
     t = min(arr)
     return [-1] if len(arr)<=1 else [i for i in arr if i != t]
 
-a = 118372
+#정수 내림차순으로 배치하기
+def solution(n):
+    return int("".join(sorted([i for i in str(n)],reverse=True)))
 
-t = "".join(sorted([i for i in str(a)],reverse=True))
+#list(str(n)) 이런식으로 해서 list 가 된다.
 
 
-print(t)
+#이상한 문자 만들기
+def solution(s):
+    return " ".join([changeText(i) for i in s.split(" ")])
+
+def changeText(text) :
+    convertText = ""
+    for i in  range(0,len(text)) :
+        if i%2==0 :
+            convertText += text[i].upper()
+        else:
+            convertText += text[i].lower()
+    return convertText
