@@ -178,3 +178,7 @@ def solution(a, b):
     
     day_list = ["MON","TUE","WED","THU","FRI","SAT","SUN"]
     return day_list[datetime.date(2016,a,b).weekday()]
+
+#자릿수 더하기
+def solution(n):
+    return sum([int(i) for i in str(n)])
