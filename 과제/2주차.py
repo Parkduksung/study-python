@@ -192,3 +192,10 @@ def solution(n):
 def solution(arr):
     t = min(arr)
     return [-1] if len(arr)<=1 else [i for i in arr if i != t]
+
+a = 118372
+
+t = "".join(sorted([i for i in str(a)],reverse=True))
+
+
+print(t)
