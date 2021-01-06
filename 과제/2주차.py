@@ -212,3 +212,11 @@ def changeText(text) :
         else:
             convertText += text[i].lower()
     return convertText
+
+# 아래 학습할 것...
+# " ".join(map(lambda x: "".join([a.lower() if i % 2 else a.upper() for i, a in enumerate(x)]), s.split(" "))) 
+
+#직사각형 별찍기
+# a,b = map(int, input().strip().split(' '))
+# for i in range(0,b) :
+#     print("*"*a)
