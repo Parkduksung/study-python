@@ -188,3 +188,7 @@ import math
 def solution(n):
     return (int(math.sqrt(n))+1)**2 if math.sqrt(n) == int(math.sqrt(n)) else -1
 
+#제일 작은 수 제거하기
+def solution(arr):
+    t = min(arr)
+    return [-1] if len(arr)<=1 else [i for i in arr if i != t]
