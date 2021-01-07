@@ -237,3 +237,15 @@ def gcm(a,b) :
             b = b/i
             continue
     return result
+
+#예산
+def solution(d, budget):
+    answer = 0
+    sum = 0
+    for i in sorted(d) :
+        if sum+i <= budget :
+            sum += i
+            answer += 1
+        else :
+            break
+    return answer
