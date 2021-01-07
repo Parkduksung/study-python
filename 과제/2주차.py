@@ -220,3 +220,20 @@ def changeText(text) :
 # a,b = map(int, input().strip().split(' '))
 # for i in range(0,b) :
 #     print("*"*a)
+
+#최대공약수와 최소공배수
+
+import math
+
+def solution(n, m):
+    return [gcm(n,m) , n*m / gcm(n,m)] 
+
+def gcm(a,b) :
+    result = 1
+    for i in range(2,min(a,b)+1) :
+        while (a%i==0)&(b%i==0) :
+            result *= i
+            a = a/i
+            b = b/i
+            continue
+    return result
