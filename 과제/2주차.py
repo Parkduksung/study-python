@@ -253,3 +253,21 @@ def solution(d, budget):
 #하샤드 수
 def solution(x):
     return True if x%sum([int(i) for i in str(x)]) == 0 else False
+
+#콜라츠 추측
+def solution(num):
+    t = 0
+    while t <= 500 : 
+        if num  == 1 :
+            break
+
+        if num % 2 == 0 :
+            num /= 2
+            t += 1
+            continue
+        else :
+            num = (num*3)+1
+            t += 1
+            continue
+        
+    return t if num == 1 else -1
