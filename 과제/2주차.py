@@ -271,3 +271,22 @@ def solution(num):
             continue
         
     return t if num == 1 else -1
+
+#실패율
+def solution(N, stages):
+    result = getTupleList(N, stages)
+    result.sort(key = lambda x:-x[1])
+    return [i[0] for i in result]
+
+def getTupleList(N, stages):
+    answer = []
+    t = len(stages)
+    for i in range(1,N+1) :
+        p = (float(stages.count(i))) / t if (float(stages.count(i))) !=0 else 0
+        if p != 0 :
+            answer.append((i , p))
+        else :
+            answer.append((i, 0 ))
+        t-= stages.count(i)
+    
+    return answer
