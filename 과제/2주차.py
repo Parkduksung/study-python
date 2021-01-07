@@ -290,3 +290,18 @@ def getTupleList(N, stages):
         t-= stages.count(i)
     
     return answer
+
+#시저 암호
+def solution(s, n):
+    return "".join([plusText(i,n) for i in s])
+
+def plusText(text,k) :
+    answer = ""
+    if text == " " :
+        answer = text
+    elif 97 <= ord(text) <= 122 :
+        answer  = chr(ord(text)-26 + k) if ord(text) + k > 122 else chr(ord(text) + k)
+    elif 65 <= ord(text) <= 90 :
+        answer = chr(ord(text)-26 + k) if ord(text) + k > 90 else chr(ord(text) + k)
+    return answer 
+#먼가 문제가 그리 좋지는 않음..
