@@ -305,3 +305,7 @@ def plusText(text,k) :
         answer = chr(ord(text)-26 + k) if ord(text) + k > 90 else chr(ord(text) + k)
     return answer 
 #먼가 문제가 그리 좋지는 않음..
+
+#내적
+def solution(a, b):
+    return sum([a[i] * b[i] for i in range(0,len(a))])
