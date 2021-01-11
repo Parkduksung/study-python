@@ -309,3 +309,38 @@ def plusText(text,k) :
 #내적
 def solution(a, b):
     return sum([a[i] * b[i] for i in range(0,len(a))])
+
+
+#[1차] 다트 게임
+
+dartResult = "1D#2S*3S"
+num = ""
+_result = []
+result = []
+for i in dartResult :
+    if i.isdigit() == True:
+        num += i
+    elif i.isalpha() == True:
+        if i == "S" :
+            _result.append(int(num))
+        elif i == "D":
+            _result.append(int(num)**2)
+        else :
+            _result.append(int(num)**3)
+        num = ""
+    else :
+        _result.append(i)
+
+for i in range(len(_result)) :
+    if _result[i] == "*" :
+        if len(result) >= 2 :
+            result[len(result)-1] *= 2
+            result[len(result)-2] *= 2
+        else :
+            result[len(result)-1] *= 2
+    elif _result[i] == "#":
+        result[len(result)-1] * -1
+    else :
+        result.append(_result[i])
+        
+print(sum(result))
