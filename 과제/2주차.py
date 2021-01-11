@@ -362,3 +362,28 @@ def solution(board, moves):
                 break
     return count*2
 
+
+#[1차] 비밀지도
+def solution(n, arr1, arr2):
+    answer = []
+    list_arr1 = []
+    list_arr2 = []
+    
+    for i in arr1 :
+        convertBin = "{:b}".format(i)
+        list_arr1.append((("0")*(n-len(convertBin)))+convertBin)
+    
+    for j in arr2 :
+        convertBin = "{:b}".format(j)
+        list_arr2.append((("0")*(n-len(convertBin)))+convertBin)
+    
+    for i in range(n) :
+        line = ""
+        for j in range(n) :
+            if int(list_arr1[i][j]) + int(list_arr2[i][j]) >= 1:
+                line += "#"
+            else :
+                line += " "
+        answer.append(line)
+    
+    return answer
