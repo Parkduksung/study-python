@@ -312,35 +312,53 @@ def solution(a, b):
 
 
 #[1차] 다트 게임
-
-dartResult = "1D#2S*3S"
-num = ""
-_result = []
-result = []
-for i in dartResult :
-    if i.isdigit() == True:
-        num += i
-    elif i.isalpha() == True:
-        if i == "S" :
-            _result.append(int(num))
-        elif i == "D":
-            _result.append(int(num)**2)
+def solution(dartResult):
+    num = ""
+    _result = []
+    result = []
+    for i in dartResult :
+        if i.isdigit() == True:
+            num += i
+        elif i.isalpha() == True:
+            if i == "S" :
+                _result.append(int(num))
+            elif i == "D":
+                _result.append(int(num)**2)
+            else :
+                _result.append(int(num)**3)
+            num = ""
         else :
-            _result.append(int(num)**3)
-        num = ""
-    else :
-        _result.append(i)
+            _result.append(i)
 
-for i in range(len(_result)) :
-    if _result[i] == "*" :
-        if len(result) >= 2 :
-            result[len(result)-1] *= 2
-            result[len(result)-2] *= 2
+    for i in range(len(_result)) :
+        if _result[i] == "*" :
+            if len(result) >= 2 :
+                result[len(result)-1] *= 2
+                result[len(result)-2] *= 2
+            else :
+                result[len(result)-1] *= 2
+        elif _result[i] == "#":
+            result[len(result)-1] *= -1
         else :
-            result[len(result)-1] *= 2
-    elif _result[i] == "#":
-        result[len(result)-1] * -1
-    else :
-        result.append(_result[i])
-        
-print(sum(result))
+            result.append(_result[i])
+    return sum(result)
+
+#크레인 인형뽑기 게임
+def solution(board, moves):
+    result = []
+    count = 0
+    for i in moves :
+        for j in range(len(board[i-1])) :
+            if board[j][i-1] >0 :
+                if len(result) == 0 :
+                    result.append(board[j][i-1])
+                else :
+                    if result[-1] == board[j][i-1] :
+                        result.pop()
+                        count+=1
+                    else :
+                        result.append(board[j][i-1])
+                board[j][i-1] = 0
+                break
+    return count*2
+
