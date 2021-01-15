@@ -386,4 +386,39 @@ def solution(n, arr1, arr2):
                 line += " "
         answer.append(line)
     
-    return answer
+    return 
+    
+#모의고사
+def solution(answers):
+    
+    p1 = [1,2,3,4,5]
+    p2 = [2,1,2,3,2,4,2,5]
+    p3 = [3,3,1,1,2,2,4,4,5,5]
+    s1 = 0
+    s2 = 0
+    s3 = 0
+    
+    for i in range(len(answers)) : 
+        if p1[i%5] == answers[i]:
+            s1 += 1 
+        if p2[i%8] == answers[i]:
+            s2 += 1 
+        if p3[i%10] == answers[i]:
+            s3 += 1 
+    a =[]
+    if s1 == s2 and s1 == s3 :
+        a = [1,2,3]
+    elif s1>s2 and s1 == s3 :
+        a = [1,3]
+    elif s2>s1 and s2 == s3 :
+        a = [2,3]
+    elif s2>s3 and s1 == s2 :
+        a = [1,2]
+    elif s1 >s2 and s1 > s3:
+        a = [1]
+    elif s2 >s3 and s2 > s1:
+        a = [2]
+    elif s3>s2 and s3> s1:
+        a = [3]
+    
+    return a
