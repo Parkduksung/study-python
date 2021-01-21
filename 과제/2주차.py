@@ -431,3 +431,19 @@ def solution(s):
     splitList = s.split(" ")
     convertIntList = [int(i) for i in splitList]
     return "{} {}".format(min(convertIntList),max(convertIntList))
+
+
+
+#최솟값 만들기
+
+a = [1,2]
+A = sorted(a)
+
+b = [3,4]
+B = sorted(b , reverse=True)
+answer = 0
+
+answer = sum([a*b for a,b in zip(A,B)])
+
+print(answer)
+
