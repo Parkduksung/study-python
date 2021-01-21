@@ -422,3 +422,12 @@ def solution(answers):
         a = [3]
     
     return a
+
+
+################### Lv2 #######################
+
+#최댓값과 최솟값
+def solution(s):
+    splitList = s.split(" ")
+    convertIntList = [int(i) for i in splitList]
+    return "{} {}".format(min(convertIntList),max(convertIntList))
