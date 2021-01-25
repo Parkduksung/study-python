@@ -435,15 +435,20 @@ def solution(s):
 
 
 #최솟값 만들기
+def solution(A,B):
+    A = sorted(A)
+    B = sorted(B, reverse=True)
+    return sum([a*b for a,b in zip(A,B)])
 
-a = [1,2]
-A = sorted(a)
-
-b = [3,4]
-B = sorted(b , reverse=True)
-answer = 0
-
-answer = sum([a*b for a,b in zip(A,B)])
-
-print(answer)
-
+#행렬의 곱셈
+def solution(arr1, arr2):
+    answer = []
+    for idx1 in range(len(arr1)):
+        row = []
+        for idx2 in range(len(arr2[0])):
+            tmp = 0
+            for idx3 in range(len(arr1[0])):
+                tmp += arr1[idx1][idx3] * arr2[idx3][idx2]
+            row.append(tmp)
+        answer.append(row)
+    return answer
